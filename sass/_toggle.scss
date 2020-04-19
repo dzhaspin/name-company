@@ -1,0 +1,65 @@
+
+.toggle {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  z-index: 9
+}
+
+.toggle:hover {
+  cursor: pointer
+}
+
+.toggle span {
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  width: 40px;
+  height: 3px;
+  background-color: $accent;
+  // transition: all 0.25s;
+}
+
+.toggle span:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  top: -8px;
+  background-color: $accent;
+  // transition: all 0.25s;
+}
+
+.toggle span:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  top: 8px;
+  background-color: $accent;
+  // transition: all 0.25s;
+}
+
+
+// .toggle-active {
+//   // position: absolute;
+//   // width: 100%;
+//   // z-index: 101;
+// }
+.toggle-active span {
+  background: transparent;
+}
+
+.toggle-active span:before {
+  background: transparent;
+  // transform: rotate(45deg);
+  // top: 0;
+}
+
+.toggle-active span:after {
+  background: transparent;
+  // transform: rotate(-45deg);
+  // top: 0;
+}
+

@@ -1,0 +1,86 @@
+.header__menu li.menu-item-has-children {
+  position: relative;
+
+  // Second sub menu - 2
+  ul.sub-menu {
+    padding: 8px 0 16px 0;
+    visibility: hidden;
+    position: absolute;
+    top: 110%;
+    z-index: 100;
+    text-transform: none;
+    min-width: 180px;
+    left: 18px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-right: 1px solid #E3E3E3;
+    border-top: 1px solid #E3E3E3;
+    transition: all 0.25s linear;
+    opacity: 0;
+    li {
+      position: relative;
+      padding: 7px 18px;
+      a {
+        padding: 0px 0px 0px 0px;
+        text-transform: none;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &:last-child {
+        margin: 0px 0px 0px 0px;
+      }
+      &:hover{
+        ul.sub-menu{
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    // Third sub menu - 3
+    ul.sub-menu {
+      position: absolute;
+      visibility: hidden;
+      margin: -9px 0 0 1px;
+      left: 100%;
+      top: 0;
+      width: 200px;
+      transition: all 0.25s ease-in;
+      opacity: 0;
+      li{
+        a{
+          color: $text;
+          &:hover{
+            color: $accent;
+          }
+        }
+      }
+
+    }
+  }
+
+  &:hover {
+    ul {
+      opacity: 1;
+      visibility: visible;
+      left: 18px;
+
+      li {
+        a {
+          color: $text;
+          text-decoration: none;
+
+          &:before {
+            display: none;
+          }
+        }
+        &:hover{
+          a{
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+}

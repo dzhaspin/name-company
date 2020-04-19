@@ -1,0 +1,150 @@
+
+/* Слайдер */
+.slick-slider{
+	min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный */ 
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки */
+.slick-dots{}
+.slick-dots li{}
+.slick-dots button{}
+
+/* Конкретный слайдер */
+.main__slider {
+	position: relative;
+}
+
+.main__arrows {
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+.main__arrows .container{
+	position: relative;
+}
+.offer__arrows .slick-arrow,
+.main__arrows .slick-arrow{
+	position: absolute;
+	z-index: 10;
+	font-size: 0;
+	width: 70px;
+	height: 70px;
+	background: rgba(0, 0, 0, 0.7);
+	transition: all 0.25s;
+	cursor: pointer;
+	&:hover{
+		background: rgba(0, 0, 0, 0.8);
+	}
+}
+.offer__arrows .slick-arrow.slick-prev,
+.main__arrows .slick-arrow.slick-prev{
+	left: 0;
+	&:before{content: '';
+		position: absolute;
+		top: 50%;left: 50%;width: 15px;height: 8px;
+		transform: translate(-50%,-50%);
+		background: url('../img/icon/prev.png') 0 0 / 100% no-repeat;
+		}
+}
+.offer__arrows .slick-arrow.slick-next,
+.main__arrows .slick-arrow.slick-next{
+	right: 0;
+	&:before{content: '';
+		position: absolute;
+		top: 50%;left: 50%;width: 15px;height: 8px;
+		transform: translate(-50%,-50%);
+		background: url('../img/icon/next.png') 0 0 / 100% no-repeat;
+		}
+}
+.main__arrows .slick-arrow.slick-disabled{
+	opacity: 0.2;
+}
+
+.main__slider .slick-dots{
+	display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main__slider .slick-dots li{
+	list-style: none;
+	margin: 0px 10px;
+	@media (max-width:$md2+px){
+		margin: 0px 7px;
+		
+	}
+}
+.main__slider .slick-dots button{
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.main__slider .slick-dots li.slick-active button{
+	background-color: transparent;
+	border: 2px solid $accent;
+}
+
+.main__slider__item {
+	padding: 0px 15px;
+}
+.main__slider__item img{
+	max-width: 100%;
+}
+.main__slider__item.slick-center{
+	
+}
+
+// offer__arrows
+
+.offer__arrows {
+  text-align: right;
+}
+
+.offer__arrows .slick-arrow{
+	position: relative;
+	margin: 30px 0px 0px 0px;
+	background-color: $accent;
+	width: 40px;
+	height: 40px;
+	&:hover{
+		background-color: #8A8A8A;
+		
+	}
+}
+.offer__arrows .slick-arrow.slick-prev{
+  margin-right: 10px;
+}
+.offer__arrows .slick-arrow.slick-next{
+
+}

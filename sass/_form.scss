@@ -1,0 +1,93 @@
+.form {
+
+  background: rgb(246, 246, 246);
+  // .form__body
+
+  &__wrap{
+    position: relative;
+    background: #EDEDED;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50px;
+      width: 1px;
+      height: 50px;
+      background: #BCBCBC;
+    }
+  }
+  &__body {
+    max-width: 700px;
+    margin: 26px auto 0px auto;
+
+
+    input {
+      position: relative;
+      display: block;
+      padding: 0px 0px 0px 69px;
+      margin: 0px 0px 20px 0px;
+      width: 100%;
+      height: 50px;
+      
+      border: 1px solid #BCBCBC;
+
+    }
+
+
+
+    .input-name {
+      background: url('../img/icon/icon-user.svg'); 
+      background-position: 15px 50%;
+      background-repeat: no-repeat
+    }
+
+    .input-phone {
+      background: url('../img/icon/icon-phone.svg'); 
+      background-position: 15px 50%;
+      background-repeat: no-repeat
+    }
+    // .form__btn
+    .form__btn {
+      display: block;
+      margin: 0px auto;
+      padding: 0px 40px;
+      @media (max-width:$md4+px){
+        width: 100%; 
+        
+      }
+    }
+  }
+
+
+}
+
+.check {
+  margin: 18px 0px 0px 0px;
+  position: relative;
+  padding-left: 19px;
+  font-size: 14px;
+  color: $text;
+  text-decoration-line: underline;
+  line-height: 16px;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  &:before {
+    content: '';
+    left: 0;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    position: absolute;
+  }
+
+  &.active {
+    &:before {
+      background: url('../img/icon/check.png') center / cover no-repeat;
+    }
+  }
+}

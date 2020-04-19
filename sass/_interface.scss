@@ -1,0 +1,138 @@
+ // Top arrow
+.scroll-up {
+  .container {
+    position: relative;
+  }
+}
+.arrow-up {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  right: 0;
+  bottom: 152px;
+  background: $accent;
+  transition: all 0.25s;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9;
+
+  img {
+    vertical-align: middle;
+  }
+
+  @media (max-width:$md2+px) {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @media (max-width:$md3+px) {
+    bottom: 185px;
+  }
+
+  @media (max-width:$md4+px) {
+    bottom: 165px;
+  }
+}
+
+// .breadcrumb
+
+.breadcrumb {
+  margin: 17px 0px 0px 0px;
+  // .breadcrumb__item
+
+  &__item {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #656565;
+
+    i {
+      margin: 0 2px 0 1px;
+    }
+  }
+  // .breadcrumb__link
+
+  &__link {
+    color: $bg;
+  }
+}
+
+ // Spollers
+.spollers {
+  margin: 43px 0px 0px 0px;
+
+  // .spollers__item
+  &__item {
+    margin: 0px 0px 15px 0px;
+    &:last-child{
+      margin: 0px 0px 0px 0px;
+    }
+  }
+
+  // .spollers__title
+  &__title {
+    display: flex;
+    position: relative;
+    padding: 15px 5px 14px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    cursor: pointer;
+
+    span {
+      color: $bg;
+    }
+
+    i {
+      // position: absolute;
+      // top: 22px;
+      margin-top: 7px;
+      margin-left: 4px;
+      width: 8px;
+      height: 8px;
+      background: url('../img/icon/arrow-spoller.svg') center no-repeat;
+      transition: all 0.25s ease-out;
+    }
+
+    @media (max-width:$md4+px) {
+      font-size: 14px;
+
+      span {
+        max-width: 257px;
+      }
+
+      i {
+        margin-top: 6px;
+      }
+    }
+
+    /* or 22px */
+
+    &.active {
+      span {
+        color: $text;
+      }
+
+      i {
+        transform: rotate(90deg);
+      }
+    }
+
+  }
+
+  // .spollers__text
+  &__text {
+    display: none;
+    padding: 15px 0px 0px 0px;
+    max-width: 1028px;
+    font-size: 16px;
+    line-height: 140%;
+    @media (max-width:$md4+px){
+      font-size: 14px;
+    }
+  }
+}
